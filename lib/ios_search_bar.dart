@@ -14,7 +14,7 @@ class IOSSearchBar extends AnimatedWidget {
     this.onCancel,
     this.onClear,
     this.onSubmit,
-    this.onUpdate,
+    this.onUpdate,this.placeHolderText,
   })  : assert(controller != null),
         assert(focusNode != null),
         super(key: key, listenable: animation);
@@ -30,6 +30,7 @@ class IOSSearchBar extends AnimatedWidget {
 
   /// The function to call when the "Clear" button is pressed
   final Function onClear;
+  String  placeHolderText="Search";
 
   /// The function to call when the text is updated
   final Function(String) onUpdate;
@@ -55,7 +56,7 @@ class IOSSearchBar extends AnimatedWidget {
               decoration: new BoxDecoration(
                 color: CupertinoColors.white,
                 border:
-                    new Border.all(width: 0.0, color: CupertinoColors.white),
+                    new Border.all(width: 0.0, color: CupertinoColors.black),
                 borderRadius: new BorderRadius.circular(10.0),
               ),
               child: new Stack(
@@ -73,7 +74,7 @@ class IOSSearchBar extends AnimatedWidget {
                         ),
                       ),
                       new Text(
-                        'Search',
+                        placeHolderText??"Search",
                         style: new TextStyle(
                           inherit: false,
                           color: CupertinoColors.inactiveGray
@@ -139,7 +140,7 @@ class IOSSearchBar extends AnimatedWidget {
                 softWrap: false,
                 style: new TextStyle(
                   inherit: false,
-                  color: CupertinoColors.white,
+                  color: CupertinoColors.inactiveGray,
                   fontSize: _kFontSize,
                 ),
               ),
