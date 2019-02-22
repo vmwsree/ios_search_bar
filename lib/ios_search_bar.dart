@@ -92,6 +92,7 @@ class IOSSearchBar extends AnimatedWidget {
                         child: new Padding(
                           padding: const EdgeInsets.only(left: 20.0),
                           child: new EditableText(
+                            backgroundCursorColor: CupertinoColors.inactiveGray,
                             controller: controller,
                             focusNode: focusNode,
                             onChanged: onUpdate,
@@ -102,7 +103,6 @@ class IOSSearchBar extends AnimatedWidget {
                               fontSize: _kFontSize,
                             ),
                             cursorColor: CupertinoColors.black,
-                            backgroundCursorColor: CupertinoColors.black,
                           ),
                         ),
                       ),
