@@ -1,8 +1,8 @@
 name: ios_search_bar
 description: A Cupertino style search bar with animations.
 version: 0.0.1
-author: Dillon Nys <dnys1@asu.edu>
-homepage: https://github.com/dnys1/ios_search_bar
+author: Vivek Mohan
+homepage: https://github.com/vmwsree/ios_search_bar
 
 dependencies:
   flutter:
